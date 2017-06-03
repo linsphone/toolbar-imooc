@@ -1,0 +1,78 @@
+@import "reset";
+@import "var";
+.container {
+    background: $qhui;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: $p5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 5px 0;
+}
+
+body{
+    background:#ddeedd;
+}
+h1 {
+    color: $red;
+}
+
+p {
+    color: darken($red, 30%);
+    background: lighten($red, 50%);
+}
+
+
+/*  混合（Mixins）*/
+
+@mixin border-radius($amount:5px) {
+    -moz-border-radius: $amount;
+    -webkit-border-radius: $amount;
+    -ms-border-radius: $amount;
+    -o-border-radius: $amount;
+    border-radius: $amount;
+}
+
+.nav {
+    dt,
+    dd {
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+    .syntax {
+        padding-left: 20px;
+    }
+}
+
+
+li {
+    font: {
+        style: italic;
+        family: serif;
+        weight: bold;
+        size: 1.2em;
+    }
+} 
+
+
+.box {
+    @include border-radius(3px)
+}
+
+
+/* 继承 */
+
+h2 {
+    border: 1px solid #ddccee;
+}
+
+.speaker {
+    @extend h2;
+    width: 400px;
+}

@@ -1,0 +1,16 @@
+body{
+	font-family:"微软雅黑",Arial;
+}
+/* == clearfix 清除浮动 == */ 
+.clearfix { zoom: 1;}
+.clearfix:after,
+.clearfix:before {
+    display: block;
+    clear: both;
+    content: "";
+}
+// 设置body内距
+/*
+*我是css的标准注释
+*设置body内距
+*/

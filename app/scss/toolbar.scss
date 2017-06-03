@@ -1,0 +1,81 @@
+@import "reset";
+@import "mixin/_mixin";
+.container {
+    background: #ddd;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+$toolbar-size:52px;
+
+
+
+.toolbar {
+	position: fixed;
+	left:50%;
+	bottom:5px;
+	margin-left: -$toolbar-size/2;
+}
+
+.toolbar-item {
+	position:relative;
+	display:block;
+	width:$toolbar-size;
+	height:$toolbar-size;
+	background:url(../img/toolbar.png);
+	background-repeat:no-repeat;
+	margin-top: 1px;
+	&:hover{
+		.toolbar-layer {
+			@include opacity(1);
+			@include scale(1);
+		}
+	}
+	@include transition(background-position 1s);
+}
+
+.toolbar-item-weixin {
+	 
+	@include toolbar-item(-798px,-860px);
+
+	.toolbar-layer{
+		height: 212px;
+		background-position:0 0;
+	}
+}
+
+.toolbar-item-feedback {
+ 
+	@include toolbar-item(-428px,-488px);
+}
+
+.toolbar-item-app {
+	 
+	@include toolbar-item(-550px,-612px);
+ 
+	.toolbar-layer{
+		height: 194px;
+		background-position:0 -222px;
+	}
+}
+
+.toolbar-item-top {
+ 
+	@include toolbar-item(-674px,-736px);
+ 
+}
+
+.toolbar-layer {
+	position: absolute;
+	right:$toolbar-size - 6;
+	bottom:-10px;
+	width:172px;
+	background-image:url(../img/toolbar.png) ;
+	background-repeat:no-repeat;
+	@include opacity(0);
+	@include transform-origin(95% 95%);
+	@include scale(0.01);
+	@include transition(all 1s);
+}

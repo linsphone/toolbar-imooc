@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>sass 学习</title>
+    <link rel="stylesheet" type="text/css" href="dist/css/b.css">
+</head>
+
+<body>
+    <div class="container">
+        <dl class="nav">
+            <dt>SASS特征</dt>
+            <dd>
+                <h4>变量(Variables)：用来定义变量</h4>
+                <div class="syntax">
+                    $变量名:变量值; $color: #333;  
+                </div>
+            </dd>
+            <dd>
+                <h4>嵌套(Nesting)：样式和属性的嵌套</h4>
+                <div class="syntax">
+                    <div>选择器的嵌套</div>
+                    <img src="app/selector-nesting.png" alt="">
+                </div>
+                <div class="syntax">
+                    <div>属性嵌套</div>
+                    <img src="app/prototype-nesting.png" alt="">
+                </div>
+            </dd>
+            <dd>
+                <h4>Mixins：抽取样式定义为模块</h4>
+                <div class="syntax">
+                    <div>@mixin Mixins名 { /*样式规则*/ }</div>
+                    <div>@mixin Mixins名（$参数名：参数值）{ /*样式规则*/ }</div>
+                    <img src="app/mixin.png" alt="">
+                </div>
+            </dd>
+            <dd>选择器继承（Selector Inheritance）：继承选择样式</dd>
+        </dl>
+    </div>
+</body>
+
+</html>
